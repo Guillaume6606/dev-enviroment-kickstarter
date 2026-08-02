@@ -9,6 +9,12 @@ elif [[ -x /home/linuxbrew/.linuxbrew/bin/brew ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
+# User-local tools (claude, and uv tool shims: ruff, mypy, dbt, pre-commit)
+export PATH="$HOME/.local/bin:$PATH"
+
+# Container runtime (OrbStack CLI shims: docker, docker-compose)
+[ -f "$HOME/.orbstack/shell/init.zsh" ] && source "$HOME/.orbstack/shell/init.zsh" 2>/dev/null
+
 # WSL: route browser-opening CLIs (gcloud, gh) to the Windows browser
 if grep -qi microsoft /proc/version 2>/dev/null; then
   command -v wslview >/dev/null && export BROWSER=wslview
