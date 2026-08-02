@@ -1,0 +1,44 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+command_timeout = 1000   # avoid warnings from slower modules like gcloud
+
+format = """
+$directory$git_branch$git_status$python$nodejs$golang$terraform$gcloud
+$character"""
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+style = "bold cyan"
+
+[git_branch]
+symbol = " "
+style = "bold purple"
+
+[git_status]
+style = "bold yellow"
+
+[python]
+symbol = " "
+format = '[$symbol$version( $virtualenv)]($style) '
+style = "bold yellow"
+
+[nodejs]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[terraform]
+symbol = "󱁢 "
+format = '[$symbol$workspace]($style) '
+
+[gcloud]
+symbol = "☁️  "
+format = '[$symbol$project]($style) '
+disabled = false

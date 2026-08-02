@@ -1,0 +1,11 @@
+# sheldon plugin manifest. Symlinked to ~/.config/sheldon/plugins.toml.
+# Sourced from .zshrc via: eval "$(sheldon source)"
+# Order matters: highlighting loads before autosuggestions.
+
+shell = "zsh"
+
+[plugins.fast-syntax-highlighting]
+github = "zdharma-continuum/fast-syntax-highlighting"
+
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"

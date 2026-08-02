@@ -1,0 +1,10 @@
+# macOS-only casks. Run automatically by bootstrap.sh when OS == macos.
+
+# Container runtime (fast, low-overhead). Comment out if you use Docker Desktop.
+cask "orbstack"
+
+# Google Cloud SDK (bq + gsutil bundled). On Linux/WSL, scripts/cloud.sh handles this.
+cask "google-cloud-sdk"
+
+# A Nerd Font so starship's glyphs render. Pick any you like.
+cask "font-meslo-lg-nerd-font"

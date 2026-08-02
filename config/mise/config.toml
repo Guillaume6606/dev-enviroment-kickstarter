@@ -1,0 +1,11 @@
+# Global runtimes. Symlinked to ~/.config/mise/config.toml by bootstrap.sh.
+# Keep this minimal — pin exact versions PER PROJECT in each repo's mise.toml
+# so you can match a client's required Terraform/Node/Go version exactly.
+
+[tools]
+node = "lts"          # required by Claude Code + JS tooling
+
+# Uncomment per your default needs; better pinned per-project:
+# terraform = "latest"
+# opentofu  = "latest"
+# go        = "latest"
